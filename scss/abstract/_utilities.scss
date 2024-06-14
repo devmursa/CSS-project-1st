@@ -1,0 +1,23 @@
+    a{
+    text-decoration: none;
+}
+
+.u-center{
+    text-align: center;
+}
+
+@mixin border{
+    border: 2px solid red;
+}
+
+.bt-m{
+    margin-bottom: 6rem;
+}
+
+.bt-l{
+    margin-bottom: 12rem;
+}
+
+li{
+    list-style: none;
+}

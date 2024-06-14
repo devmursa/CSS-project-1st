@@ -1,0 +1,82 @@
+.section-review {
+  // padding: 25rem 0;
+  position: relative;
+  // margin-bottom: 35rem;
+  height: 120vh;
+  width: 95vw;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.review-video {
+  position: absolute;
+  // top: 0;
+  // left: 0;
+  width: 100%;
+  overflow: hidden;
+  // height: 100%;
+  opacity: 0.15;
+}
+
+.review-boxes {
+  position: absolute;
+
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%);
+
+  // padding: 6rem 3rem;
+}
+
+.review-box {
+  background-color: #fff;
+  margin: 6rem 1rem;
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //   transform: skew(2deg);
+  border-bottom: var(--green-primary) 5px solid;
+
+  &:hover .person_img {
+    filter: blur(0.5rem);
+  }
+
+  &:hover .person-name {
+    color: #fff;
+  }
+}
+
+.person {
+  position: relative;
+  //   transform: skew(-2deg);
+
+  &_img {
+    transition: all 0.2s;
+
+    clip-path: circle(40% at 50% 50%);
+  }
+
+  &-name {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 1.6rem;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: transparent;
+    transition: all 0.3s;
+  }
+}
+
+.review {
+  transform: skew(-2deg);
+
+  &-body {
+    color: #777;
+    margin-top: 1rem;
+  }
+}

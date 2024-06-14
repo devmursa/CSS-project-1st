@@ -1,0 +1,154 @@
+.section-form{
+    
+    padding: 20rem 0;
+    background-color: var(--green-primary);
+    margin-top: -5rem;
+   
+    
+}
+
+.form-box{
+    background-image:url('../img/nat-10.jpg');
+    width: 80%;
+    margin: 0 auto;
+    height: 50rem;
+   
+}
+
+.form{
+    background-image:linear-gradient(to right,rgba(#fff,.9),rgba(#fff,.9));
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 0, 60% 0 ,50% 100% ,0 100%);
+    padding: 3rem 4rem;
+
+
+    &-heading{
+        margin-bottom: 6rem;
+    }
+
+    &-group{
+        margin: 1.8rem;
+
+
+        &-3{
+            margin-top: -1rem;
+        }
+        &-4{
+            margin-top: 4rem;
+        }
+
+      
+    }
+
+    &-input,&-email{
+        width: 30%;
+        padding: 1.5rem .75rem;
+        display: block;
+        border: none;
+        border-bottom: transparent 4px solid;
+        outline: none;
+        color: #777;
+        font-family: inherit;
+        font-size: 1.5rem;
+
+        &::placeholder{
+            font-size: 1.4rem;
+            text-transform: uppercase;
+        }
+
+
+        &:focus{
+            border-bottom: #28b485 4px solid;
+        }
+
+        &:focus:invalid{
+            border-bottom: red 4px solid;
+        }
+
+        &:focus &>label{
+            color: red;
+        }
+
+    }
+}
+
+.input-label,.email-label{
+    font-size: 1.4rem;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: .70rem;
+    margin-top: .5rem;
+    transform: translateY(-4.85rem);
+    opacity: 0;
+    transition: all .3s;
+
+   
+}
+
+.form-input:focus + .input-label{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.form-email:focus + .email-label{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.form-input:focus::placeholder{
+    opacity: 0;
+}
+
+.form-email:focus::placeholder{
+    opacity: 0;
+}
+
+
+.ball{
+    height: 3rem;
+    width: 3rem;
+    border: #28b485 5px solid;
+    display: inline-block;
+    border-radius: 50%;
+    transform: translateX(-2.2rem) translateY(.05rem);
+    margin-right: -1.5rem;
+}
+
+
+.ball::after{
+    content: "";
+    height: 1.5rem;
+    width:1.5rem;
+    background-color: #28b485;
+    display: inline-block;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translateX(.25rem) translateY(.05rem);
+}
+
+.big-label,.small-label{
+    text-transform: uppercase;
+   
+    
+}
+
+.small-label{
+    margin-right: 2rem;
+}
+
+
+.small,.big{
+    visibility:hidden;
+    
+}
+
+
+
+.small:checked + .ball::after{
+    opacity: 1;
+}
+
+.big:checked + .ball::after{
+    opacity: 1;
+}
